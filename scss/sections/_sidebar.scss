@@ -1,0 +1,84 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    z-index: 999;
+    @include flex(space-between,center,column);
+    height: 100vh;
+    background-color: $secondary-color;
+    color: #fff;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    transition: all .3s ease-in-out;
+    @include lg{
+        width: 300px;
+    }
+    &.open{
+        width: 300px;
+    }
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+    .logo{
+        align-self:stretch;
+        padding: 20px;
+        background-color: $primary-color;
+        h1{
+            // padding:25px;
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 26px;
+            font-weight: 100;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            span{
+                font-weight: lighter;
+
+            }
+        }
+    }
+    &-menu{
+        padding: 40px;
+        li{
+            margin: 10px 0;
+            padding: 10px 0;
+            width: 180px;
+            @include flex(flex-start,center);
+            a{
+                color:#fff;
+            }
+            &:hover .dot{
+                background-color: #fff;
+            }
+            &:before{
+                display: inline-block;
+                content: "";
+                border-top: 1px solid #fff;
+                width: 0;
+                margin-right: 10px;
+                transform: translate((10px, 0));
+            }
+            &.active::before{
+                width: 40px;
+            }
+        }
+    }
+    &-social-links{
+        padding: 1px;
+        text-align: center;
+        white-space: nowrap;
+        i{
+            // position: absolute;
+            margin: 0 10px;
+            transition: all .3s ease;
+            &:hover{
+                color: $primary-color;
+                transform: scale(1.5);
+                cursor: pointer;
+            }
+        }
+    }
+    
+}

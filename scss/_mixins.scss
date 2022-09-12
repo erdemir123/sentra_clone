@@ -1,0 +1,40 @@
+// SMALL DEVICES
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+      @content;
+    }
+  }
+  
+  // MEDIUM DEVICES
+  @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+      @content;
+    }
+  }
+  
+  // LARGE DEVICES
+  @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+      @content;
+    }
+  }
+  
+  // EXTRA LARGE DEVICES
+  @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+      @content;
+    }
+  }
+  //flexbox
+  @mixin flex($justify,$align:center,$direction:row,$wrap:wrap){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+  }
+  @mixin grid($columns, $gap:0){
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat($columns,1fr);
+  }

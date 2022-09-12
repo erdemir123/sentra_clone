@@ -1,0 +1,5 @@
+.footer{
+    @include flex(center, center);
+    background-color:$primary-color;
+    color: #eeeeee;
+}

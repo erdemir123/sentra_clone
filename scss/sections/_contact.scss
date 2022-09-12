@@ -1,0 +1,31 @@
+.contact-sentra{
+    margin: 50px 0;
+    .contact-form{
+        @include md{
+            @include grid(2,20px)
+        }
+        input,
+        textarea{
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 15px;
+            background-color: #eeee;
+        }
+        textarea{
+            @include md{
+                grid-area:2/1/5/3
+            } 
+        }
+        .btn{
+            border-radius: 10px;
+            transition: .5s;
+            @include md{
+                grid-column:1/3; 
+            }
+            &:hover{
+                background-color: #eeeeee;
+                color: $primary-color;
+            }
+        }
+    }
+}

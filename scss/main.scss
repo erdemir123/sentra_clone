@@ -1,0 +1,47 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "utilities";
+@import "./sections/header";
+@import "./sections/sidebar";
+@import "./sections/featured-places";
+@import "./sections/recent";
+@import "./sections/company-presentation";
+@import "./sections/blog-entries";
+@import "./sections/contact";
+@import "./sections/footer";
+
+main{
+    @include lg{
+        margin-left: 300px;
+        padding-top:$container-padding-lg;
+    }
+    section{
+        padding:  $container-padding;
+        @include md{
+            padding: 30px $container-padding-md
+        }
+        @include lg{
+            padding:30px $container-padding-md
+        }
+    }
+    .section-title{
+        @include flex(flex-start,center);
+        margin-bottom:30px;
+        padding-bottom: 20px;
+        line-height: 1.5;   
+        h1{
+            margin-right: 100px;
+            font-size: 30px;
+            span{
+                display: block;
+                color: $primary-color;
+            }
+        }
+        p{
+            width: 300px;
+            font-size: 15px;
+        }
+    }
+    
+}
